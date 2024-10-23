@@ -5,5 +5,33 @@
 </head>
 <body>
 <nav th:replace="shared/nav :: nav"></nav>
+<div class="m1">
+  <section class="section ">
+    <h3 class="title">Categorias</h3>
+    <hr>
+    <a class="button is-primary" >Nueva Categoria</a>
+    <div class="table-container m-1">
+      <table class="table">
+        <thead>
+        <tr>
+          <td>#</td>
+          <td>Nombre</td>
+          <td>Acciones</td>
+        </tr>
+        </thead>
+        <tbody th:if="${categories.totalElements==0}">
+        <tr>
+          <td>No Hay Elementos</td>
+        </tr>
+        </tbody>
+        <tbody th:if="${categories.totalElements}>0" >
+        <tr>
+         <td></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
 </body>
 </html>
